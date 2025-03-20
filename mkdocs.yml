@@ -1,0 +1,109 @@
+site_name: Методичка по Java
+repo_name: 1ommyS/itp-ebook
+repo_url: https://github.com/1ommyS/itp-ebook
+edit_uri: edit/develop/docs/
+copyright: Copyright &copy; 2022 - 2023 1ommyS
+theme:
+  icon:
+    repo: fontawesome/brands/github
+    logo: fontawesome/solid/book
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  language: ru
+  name: material
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      lang: ru
+  - git-revision-date-localized:
+      enable_creation_date: true
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/1ommyS
+      name: ТГ автора
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/jvmchat
+      name: Pro.JVM Чат
+
+
+nav:
+  - Оглавление: index.md
+  - Java Core: java-core.md
+      - Datatypes: javabase/01-datatypes.md
+      - Mathfunctions: javabase/02-mathfunctions.md
+      - IfElse: javabase/03-control.md
+      - Arrays: javabase/04-arrays.md
+      - Methods: javabase/05-methods.md
+      - Jvm: javabase/06-jvm.md
+      - Classes: javabase/07-classes.md
+      - Date: javabase/08-date.md
+      - Files: javabase/09-files.md
+      - Exceptions: javabase/10-exceptions.md
+      - Interfaces: javabase/11-interfaces.md
+      - Patterns: javabase/12-patterns.md
+      - Lambdas: javabase/13-anonymous-lambda.md
+      - Stream API: javabase/14-stream-api.md
+      - Regex: javabase/15-regex.md
+      - Multithreading: javabase/16-multithreading.md
+      - HashMap: javabase/17-hashmap.md
+  - Kotlin:
+      - Intro&Jdbc: 01-intro-jdbc.md
