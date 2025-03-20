@@ -2,7 +2,7 @@ site_name: Методичка по Java
 repo_name: 1ommyS/itp-ebook
 repo_url: https://github.com/1ommyS/itp-ebook
 edit_uri: edit/develop/docs/
-copyright: Copyright &copy; 2022 - 2023 1ommyS
+copyright: Copyright &copy; 2022 - 2025 1ommyS
 theme:
   icon:
     repo: fontawesome/brands/github
