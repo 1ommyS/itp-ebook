@@ -87,7 +87,7 @@ extra:
 
 nav:
   - Оглавление: index.md
-  - Java Core: java-core.md
+  - Java Core:
       - Datatypes: javabase/01-datatypes.md
       - Mathfunctions: javabase/02-mathfunctions.md
       - IfElse: javabase/03-control.md
