@@ -106,4 +106,4 @@ nav:
       - Multithreading: javabase/16-multithreading.md
       - HashMap: javabase/17-hashmap.md
   - Kotlin:
-      - Intro&Jdbc: 01-intro-jdbc.md
+      - IntroJdbc: kotlin/01-intro-jdbc.md
