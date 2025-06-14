@@ -84,7 +84,6 @@ extra:
       link: https://t.me/jvmchat
       name: Pro.JVM Чат
 
-
 nav:
   - Оглавление: index.md
   - Java Core:
@@ -107,5 +106,24 @@ nav:
       - HashMap: javabase/17-hashmap.md
   - Kotlin:
       - IntroJdbc: kotlin/01-intro-jdbc.md
+  - SQL:
+      - Основы: sql/main-operators.md
+      - Ограничения(contsraints): sql/constraints.md
+      - Виды связей: sql/relations.md
+      - Джоины: sql/joins.md
+      - Индексы: sql/indexes.md
+      - Партиционирование: sql/partitions.md
+      - Master/Slave: sql/master-slave.md
+      - sharding: sql/sharding.md
+      - Consistent-Hash: sql/consistent-hash.md
+  - Hibernate:
+      - База: hibernate/base.md
+      - Entity_Graph: hibernate/entity_graph.md
+  - Spring:
+      - Основы: spring/base.md
+      - DI: spring/di.md
+      - DataJPA: spring/data-jpa.md
+  - Архитектура:
+      - Основные виды: arch.md
   - Homework:
       - JDBC,Tests: homework/01-jdbc-tests-docker.md
