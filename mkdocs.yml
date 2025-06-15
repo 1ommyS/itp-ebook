@@ -123,6 +123,12 @@ nav:
       - Основы: spring/base.md
       - DI: spring/di.md
       - DataJPA: spring/data-jpa.md
+      - Dispatcher Servlet: spring/dispatcher-servlet.md
+      - REST controllers & all info: spring/rest.md
+      - Severs: spring/servers.md
+      - REST template / Openfeign: spring/rest-feign.md
+  - WEB:
+      - HTML/CSS: web/html_css.md
   - Архитектура:
       - Основные виды: arch.md
   - Homework:
