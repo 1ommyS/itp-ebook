@@ -40,6 +40,9 @@
 2) [Циклы](tasks/02-cycles.md) <br>
 3) [Цикл for,  git, [по желанию] массивы](tasks/03-cycles-for.md) <br>
 
+## Топ IT
+1) [Практика коллекций и стримов](tasks/topit/01.md) <br>
+
 ## Проекты
 1) Электронный документооборот: <br>
    **[Gitlab проекта](https://git-itpark32.ru/students-projects/java/eleven-thread/edo)**: 
