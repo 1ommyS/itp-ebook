@@ -39,7 +39,8 @@
 1) [Типы данных и ифы](tasks/01-data-types-conditions.md) <br>
 2) [Циклы](tasks/02-cycles.md) <br>
 3) [Цикл for,  git, [по желанию] массивы](tasks/03-cycles-for.md) <br>
-
+4) [Массивы](tasks/04-arrays.md)
+5) [Методы и строки](tasks/twelwe/05-methods.md)
 ## Топ IT
 1) [Практика коллекций и стримов](tasks/topit/01.md) <br>
 
