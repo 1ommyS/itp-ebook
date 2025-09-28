@@ -1,24 +1,6 @@
 # Это методичка - набор кратких сведений по различным темам
  Здесь будет краткий конспект по различным темам
 
-1) [Типы данных](javabase1-datatypes.md) <br>
-2) [Математические функции](javabase2-mathfunctions.md) <br>
-3) [Управляющие конструкции. Условия, циклы, оператор switch case и тд](javabase3-control.md) <br>
-4) [Массивы](javabase4-arrays.md) <br>
-5) [Методы](javabase5-methods.md) <br>
-6) [JVM](javabase6-jvm.md) <br>
-7) [Classes and objects](javabase7-classes.md) <br>
-8) [Дата и время](javabase8-date.md) <br>
-9) [Работа с файлами](javabase9-files.md) <br>
-10) [Исключения](javabase0-exceptions.md) <br>
-11) [Интерфейсы и абстрактные классы](javabase1-interfaces.md) <br>
-12) [Паттерны проектирования](javabase2-patterns.md) <br>
-13) [Анонимные классы, лямбда-выражения](javabase3-anonymous-lambda.md) <br>
-14) [Stream API](javabase4-stream-api.md) <br>
-15) [Регулярные выражения](javabase5-regex.md) <br>
-16) [Многопоточность](javabase6-multithreading.md) <br>
-17) [Hashmap, Hashset](javabase7-hashmap.md) <br>
-18) [Котлин, jdbc](kotlin1-intro-jdbc.md) <br>
 ## Задачи 11 поток
 
 1) [Задачи после допа от 3 декабря](tasks/01-dop.md) <br>
@@ -39,8 +21,9 @@
 1) [Типы данных и ифы](tasks/01-data-types-conditions.md) <br>
 2) [Циклы](tasks/02-cycles.md) <br>
 3) [Цикл for,  git, [по желанию] массивы](tasks/03-cycles-for.md) <br>
-4) [Массивы](tasks/04-arrays.md)
-5) [Методы и строки](tasks/twelwe/05-methods.md)
+4) [Массивы](tasks/04-arrays.md) <br>
+5) [Методы и строки](tasks/twelwe/05-methods.md) <br>
+6) [Методы, рекурсия, switch](tasks/twelwe/06-methods-recursion.md) <br>
 ## Топ IT
 1) [Практика коллекций и стримов](tasks/topit/01.md) <br>
 
