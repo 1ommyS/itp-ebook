@@ -24,6 +24,7 @@
 4) [Массивы](tasks/04-arrays.md) <br>
 5) [Методы и строки](tasks/twelwe/05-methods.md) <br>
 6) [Методы, рекурсия, switch](tasks/twelwe/06-methods-recursion.md) <br>
+7) [Ветки в Git, ООП](tasks/twelwe/07-git-branches-oop.md)
 ## Топ IT
 1) [Практика коллекций и стримов](tasks/topit/01.md) <br>
 
