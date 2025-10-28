@@ -104,6 +104,10 @@ nav:
       - Regex: javabase/15-regex.md
       - Multithreading: javabase/16-multithreading.md
       - HashMap: javabase/17-hashmap.md
+      - Интерфейсы: javabase/08-interfaces.md
+      - Исключения: javabase/09-exceptions.md
+      - Static: javabase/10-static.md
+      - DateTime: javabase/11-datetime.md
   - Kotlin:
       - IntroJdbc: kotlin/01-intro-jdbc.md
   - SQL:
