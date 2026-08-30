@@ -8,6 +8,7 @@
 
 [Открыть подробный конспект](01-intro-jdbc.md){ .md-button .md-button--primary }
 [Перейти к практике](practice.md){ .md-button }
+[Посмотреть решения](solutions.md){ .md-button }
 
 </div>
 
@@ -66,6 +67,8 @@ Kotlin/JVM компилируется в JVM-байткод и использу�
     Задания от null-safe функций до coroutine pipeline и итогового backend-проекта.
 
     [:octicons-arrow-right-24: Начать практику](practice.md)
+
+    [:material-check-circle-outline: Готовые решения](solutions.md)
 
 </div>
 

@@ -8,6 +8,7 @@
 
 [Начать с языка](language.md){ .md-button .md-button--primary }
 [Открыть практику](practice.md){ .md-button }
+[Посмотреть решения](solutions.md){ .md-button }
 
 </div>
 
@@ -75,6 +76,8 @@ Go не отменяет проектирование. Goroutines без вла�
     30 заданий: от slices и errors до worker pool, REST API, PostgreSQL и итогового сервиса.
 
     [:octicons-arrow-right-24: Решать](practice.md)
+
+    [:material-check-circle-outline: Готовые решения](solutions.md)
 
 </div>
 

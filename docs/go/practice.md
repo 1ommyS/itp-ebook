@@ -16,33 +16,49 @@
 
 ### 1. Модуль конвертации температур
 
+[Готовое решение →](solutions.md#go-01)
+
 Создайте module с library package и CLI. Экспортируйте только необходимые types/functions, добавьте examples, которые запускаются как тесты документации.
 
 ### 2. Анализатор текста
+
+[Готовое решение →](solutions.md#go-02)
 
 Посчитайте Unicode-символы, слова и частоты. Не смешивайте bytes и runes. Результат с одинаковой частотой сортируйте детерминированно.
 
 ### 3. Slice ownership
 
+[Готовое решение →](solutions.md#go-03)
+
 Реализуйте `AppendUnique`, `CloneAndSort` и `Window`. Для каждой функции письменно определите, может ли она изменять input и удерживать исходный backing array.
 
 ### 4. LRU cache
+
+[Готовое решение →](solutions.md#go-04)
 
 Создайте cache фиксированной ёмкости на map + doubly linked list. Сначала single-threaded, затем concurrent-safe. Проверьте zero capacity, update существующего ключа и eviction order.
 
 ### 5. Domain types
 
+[Готовое решение →](solutions.md#go-05)
+
 Опишите `Order`, `OrderID`, `Money`, `Status`. Constructor валидирует инварианты. Не используйте float для денег. Zero value каждого типа должен быть либо полезен, либо явно отклонён validation.
 
 ### 6. Маленькие interfaces
+
+[Готовое решение →](solutions.md#go-06)
 
 Есть сервис, которому нужны чтение заказа и отправка события. Объявите interfaces рядом с сервисом, напишите in-memory adapters и докажите compile-time реализацию.
 
 ### 7. Error chain
 
+[Готовое решение →](solutions.md#go-07)
+
 Создайте sentinel `ErrNotFound`, typed `ValidationError` и infrastructure error. Оборачивайте причины через `%w`; тесты используют `errors.Is`/`errors.As`, а не строки.
 
 ### 8. Generic Set
+
+[Готовое решение →](solutions.md#go-08)
 
 Реализуйте `Set[T comparable]` и операции union/intersection. Объясните, почему constraint `comparable` необходим и почему generic repository обычно является плохой domain abstraction.
 
@@ -50,33 +66,49 @@
 
 ### 9. Ограниченный parallel map
 
+[Готовое решение →](solutions.md#go-09)
+
 Реализуйте generic `ParallelMap` с лимитом workers, сохранением порядка результатов, cancellation и возвратом первой ошибки.
 
 ### 10. Fan-out/fan-in pipeline
+
+[Готовое решение →](solutions.md#go-10)
 
 Постройте pipeline чтения файлов, вычисления checksum и агрегации. Закрытие channels должно происходить ровно одним владельцем.
 
 ### 11. Отменяемый worker pool
 
+[Готовое решение →](solutions.md#go-11)
+
 Обработайте очередь задач несколькими workers. Проверьте cancellation при blocked input и blocked output, закрытие results и отсутствие goroutine leaks.
 
 ### 12. Rate limiter
+
+[Готовое решение →](solutions.md#go-12)
 
 Сделайте token bucket с burst capacity. Тестируйте с controllable clock, не заставляя тест реально ждать.
 
 ### 13. Single-flight loader
 
+[Готовое решение →](solutions.md#go-13)
+
 При одновременном запросе одного ключа expensive load выполняется один раз. Ошибка также доставляется всем waiters. После завершения ключ можно загрузить повторно.
 
 ### 14. Concurrent ledger
+
+[Готовое решение →](solutions.md#go-14)
 
 Поддерживайте составной инвариант «сумма денег постоянна». Реализуйте mutex-вариант и owner-goroutine вариант; прогоните race detector и benchmark.
 
 ### 15. Leak investigation
 
+[Готовое решение →](solutions.md#go-15)
+
 Вам дан pipeline, который прекращает чтение после первого результата. Найдите заблокированных producers через goroutine profile, добавьте cancellation и regression test.
 
 ### 16. Graceful background job
+
+[Готовое решение →](solutions.md#go-16)
 
 Периодическая задача запускается по ticker, не допускает overlapping execution и завершается по context. Ошибка последнего запуска доступна health endpoint.
 
@@ -84,25 +116,37 @@
 
 ### 17. Strict JSON endpoint
 
+[Готовое решение →](solutions.md#go-17)
+
 Создайте `POST /orders`: ограничьте body, запретите неизвестные поля и второй JSON object, разделите syntax и domain validation.
 
 ### 18. Middleware chain
+
+[Готовое решение →](solutions.md#go-18)
 
 Реализуйте request ID, access log, panic recovery, timeout и authentication middleware. Проверьте порядок выполнения и сохранение status code.
 
 ### 19. Idempotent create
 
+[Готовое решение →](solutions.md#go-19)
+
 Повторный запрос с тем же idempotency key и payload возвращает исходный результат; другой payload с тем же ключом — conflict. Параллельные запросы не создают два объекта.
 
 ### 20. Pagination contract
+
+[Готовое решение →](solutions.md#go-20)
 
 Реализуйте cursor pagination. Cursor должен быть opaque, подписан и стабилен при добавлении новых записей. Проверьте malformed и expired cursor.
 
 ### 21. HTTP client
 
+[Готовое решение →](solutions.md#go-21)
+
 Создайте клиент downstream-сервиса с общим `http.Client`, timeout budget, ограниченным retry только для безопасных временных ошибок и закрытием response body.
 
 ### 22. Graceful shutdown test
+
+[Готовое решение →](solutions.md#go-22)
 
 Запустите реальный HTTP server, начните медленный запрос, отправьте shutdown и докажите, что активный запрос завершился в пределах budget, а новый не принят.
 
@@ -110,17 +154,25 @@
 
 ### 23. Repository
 
+[Готовое решение →](solutions.md#go-23)
+
 Реализуйте create/find/list через `database/sql`. Закрывайте rows, проверяйте `rows.Err`, отображайте `sql.ErrNoRows` в domain error.
 
 ### 24. Transactional transfer
+
+[Готовое решение →](solutions.md#go-24)
 
 Переведите деньги между счетами с row locking, проверкой баланса и audit record. Проверьте rollback и concurrent transfers.
 
 ### 25. Outbox
 
+[Готовое решение →](solutions.md#go-25)
+
 В одной транзакции измените aggregate и сохраните событие. Отдельный publisher читает outbox, публикует и отмечает запись. Обеспечьте at-least-once и идемпотентного consumer.
 
 ### 26. Pool under load
+
+[Готовое решение →](solutions.md#go-26)
 
 Создайте нагрузочный тест с маленьким `MaxOpenConns`. Наблюдайте `WaitCount`, `WaitDuration`, latency и database capacity. Обоснуйте итоговые настройки.
 
@@ -128,17 +180,25 @@
 
 ### 27. Fuzz JSON parser
 
+[Готовое решение →](solutions.md#go-27)
+
 Добавьте fuzz test к парсеру cursor или входного DTO. Seed corpus должен включать валидные, пустые, Unicode и граничные значения.
 
 ### 28. Benchmark и аллокации
+
+[Готовое решение →](solutions.md#go-28)
 
 Сравните две реализации serializer/aggregator. Используйте `ReportAllocs`, realistic payload и профилирование. Не принимайте оптимизацию без измеримого выигрыша.
 
 ### 29. Observability
 
+[Готовое решение →](solutions.md#go-29)
+
 Добавьте structured logs, HTTP RED metrics, DB pool metrics и trace propagation. Не используйте user-controlled значение как безграничный label.
 
 ### 30. Failure drill
+
+[Готовое решение →](solutions.md#go-30)
 
 Смоделируйте недоступность БД, зависший downstream, SIGTERM под нагрузкой и заполнение очереди. Для каждого сценария зафиксируйте ожидаемые сигналы и восстановление.
 

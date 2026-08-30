@@ -202,11 +202,13 @@ nav:
       - Маршрут Kotlin: kotlin/index.md
       - Kotlin/JVM и JDBC: kotlin/01-intro-jdbc.md
       - Практика Kotlin: kotlin/practice.md
+      - Решения Kotlin: kotlin/solutions.md
   - Go:
       - Маршрут Go: go/index.md
       - Язык и типы: go/language.md
       - Backend и concurrency: go/backend.md
       - Практика Go: go/practice.md
+      - Решения Go: go/solutions.md
   - Дополнительно:
       - Архитектурные стили: arch.md
       - HTML и CSS: web/html_css.md
