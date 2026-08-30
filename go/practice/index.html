@@ -14,7 +14,7 @@
         <link rel="prev" href="../backend/">
       
       
-        <link rel="next" href="../../arch/">
+        <link rel="next" href="../solutions/">
       
       
         
@@ -697,6 +697,8 @@
       
         
       
+        
+      
     
     
     
@@ -756,6 +758,8 @@
       
         
           
+        
+      
         
       
         
@@ -1452,6 +1456,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Решения Go
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2137,68 +2169,98 @@
 </ul>
 <h2 id="1-toolchain">Уровень 1. Toolchain и язык<a class="headerlink" href="#1-toolchain" title="Permanent link">&para;</a></h2>
 <h3 id="1">1. Модуль конвертации температур<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-01">Готовое решение →</a></p>
 <p>Создайте module с library package и CLI. Экспортируйте только необходимые types/functions, добавьте examples, которые запускаются как тесты документации.</p>
 <h3 id="2">2. Анализатор текста<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-02">Готовое решение →</a></p>
 <p>Посчитайте Unicode-символы, слова и частоты. Не смешивайте bytes и runes. Результат с одинаковой частотой сортируйте детерминированно.</p>
 <h3 id="3-slice-ownership">3. Slice ownership<a class="headerlink" href="#3-slice-ownership" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-03">Готовое решение →</a></p>
 <p>Реализуйте <code>AppendUnique</code>, <code>CloneAndSort</code> и <code>Window</code>. Для каждой функции письменно определите, может ли она изменять input и удерживать исходный backing array.</p>
 <h3 id="4-lru-cache">4. LRU cache<a class="headerlink" href="#4-lru-cache" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-04">Готовое решение →</a></p>
 <p>Создайте cache фиксированной ёмкости на map + doubly linked list. Сначала single-threaded, затем concurrent-safe. Проверьте zero capacity, update существующего ключа и eviction order.</p>
 <h3 id="5-domain-types">5. Domain types<a class="headerlink" href="#5-domain-types" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-05">Готовое решение →</a></p>
 <p>Опишите <code>Order</code>, <code>OrderID</code>, <code>Money</code>, <code>Status</code>. Constructor валидирует инварианты. Не используйте float для денег. Zero value каждого типа должен быть либо полезен, либо явно отклонён validation.</p>
 <h3 id="6-interfaces">6. Маленькие interfaces<a class="headerlink" href="#6-interfaces" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-06">Готовое решение →</a></p>
 <p>Есть сервис, которому нужны чтение заказа и отправка события. Объявите interfaces рядом с сервисом, напишите in-memory adapters и докажите compile-time реализацию.</p>
 <h3 id="7-error-chain">7. Error chain<a class="headerlink" href="#7-error-chain" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-07">Готовое решение →</a></p>
 <p>Создайте sentinel <code>ErrNotFound</code>, typed <code>ValidationError</code> и infrastructure error. Оборачивайте причины через <code>%w</code>; тесты используют <code>errors.Is</code>/<code>errors.As</code>, а не строки.</p>
 <h3 id="8-generic-set">8. Generic Set<a class="headerlink" href="#8-generic-set" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-08">Готовое решение →</a></p>
 <p>Реализуйте <code>Set[T comparable]</code> и операции union/intersection. Объясните, почему constraint <code>comparable</code> необходим и почему generic repository обычно является плохой domain abstraction.</p>
 <h2 id="2-concurrency">Уровень 2. Concurrency<a class="headerlink" href="#2-concurrency" title="Permanent link">&para;</a></h2>
 <h3 id="9-parallel-map">9. Ограниченный parallel map<a class="headerlink" href="#9-parallel-map" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-09">Готовое решение →</a></p>
 <p>Реализуйте generic <code>ParallelMap</code> с лимитом workers, сохранением порядка результатов, cancellation и возвратом первой ошибки.</p>
 <h3 id="10-fan-outfan-in-pipeline">10. Fan-out/fan-in pipeline<a class="headerlink" href="#10-fan-outfan-in-pipeline" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-10">Готовое решение →</a></p>
 <p>Постройте pipeline чтения файлов, вычисления checksum и агрегации. Закрытие channels должно происходить ровно одним владельцем.</p>
 <h3 id="11-worker-pool">11. Отменяемый worker pool<a class="headerlink" href="#11-worker-pool" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-11">Готовое решение →</a></p>
 <p>Обработайте очередь задач несколькими workers. Проверьте cancellation при blocked input и blocked output, закрытие results и отсутствие goroutine leaks.</p>
 <h3 id="12-rate-limiter">12. Rate limiter<a class="headerlink" href="#12-rate-limiter" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-12">Готовое решение →</a></p>
 <p>Сделайте token bucket с burst capacity. Тестируйте с controllable clock, не заставляя тест реально ждать.</p>
 <h3 id="13-single-flight-loader">13. Single-flight loader<a class="headerlink" href="#13-single-flight-loader" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-13">Готовое решение →</a></p>
 <p>При одновременном запросе одного ключа expensive load выполняется один раз. Ошибка также доставляется всем waiters. После завершения ключ можно загрузить повторно.</p>
 <h3 id="14-concurrent-ledger">14. Concurrent ledger<a class="headerlink" href="#14-concurrent-ledger" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-14">Готовое решение →</a></p>
 <p>Поддерживайте составной инвариант «сумма денег постоянна». Реализуйте mutex-вариант и owner-goroutine вариант; прогоните race detector и benchmark.</p>
 <h3 id="15-leak-investigation">15. Leak investigation<a class="headerlink" href="#15-leak-investigation" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-15">Готовое решение →</a></p>
 <p>Вам дан pipeline, который прекращает чтение после первого результата. Найдите заблокированных producers через goroutine profile, добавьте cancellation и regression test.</p>
 <h3 id="16-graceful-background-job">16. Graceful background job<a class="headerlink" href="#16-graceful-background-job" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-16">Готовое решение →</a></p>
 <p>Периодическая задача запускается по ticker, не допускает overlapping execution и завершается по context. Ошибка последнего запуска доступна health endpoint.</p>
 <h2 id="3-http-api">Уровень 3. HTTP API<a class="headerlink" href="#3-http-api" title="Permanent link">&para;</a></h2>
 <h3 id="17-strict-json-endpoint">17. Strict JSON endpoint<a class="headerlink" href="#17-strict-json-endpoint" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-17">Готовое решение →</a></p>
 <p>Создайте <code>POST /orders</code>: ограничьте body, запретите неизвестные поля и второй JSON object, разделите syntax и domain validation.</p>
 <h3 id="18-middleware-chain">18. Middleware chain<a class="headerlink" href="#18-middleware-chain" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-18">Готовое решение →</a></p>
 <p>Реализуйте request ID, access log, panic recovery, timeout и authentication middleware. Проверьте порядок выполнения и сохранение status code.</p>
 <h3 id="19-idempotent-create">19. Idempotent create<a class="headerlink" href="#19-idempotent-create" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-19">Готовое решение →</a></p>
 <p>Повторный запрос с тем же idempotency key и payload возвращает исходный результат; другой payload с тем же ключом — conflict. Параллельные запросы не создают два объекта.</p>
 <h3 id="20-pagination-contract">20. Pagination contract<a class="headerlink" href="#20-pagination-contract" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-20">Готовое решение →</a></p>
 <p>Реализуйте cursor pagination. Cursor должен быть opaque, подписан и стабилен при добавлении новых записей. Проверьте malformed и expired cursor.</p>
 <h3 id="21-http-client">21. HTTP client<a class="headerlink" href="#21-http-client" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-21">Готовое решение →</a></p>
 <p>Создайте клиент downstream-сервиса с общим <code>http.Client</code>, timeout budget, ограниченным retry только для безопасных временных ошибок и закрытием response body.</p>
 <h3 id="22-graceful-shutdown-test">22. Graceful shutdown test<a class="headerlink" href="#22-graceful-shutdown-test" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-22">Готовое решение →</a></p>
 <p>Запустите реальный HTTP server, начните медленный запрос, отправьте shutdown и докажите, что активный запрос завершился в пределах budget, а новый не принят.</p>
 <h2 id="4-postgresql">Уровень 4. PostgreSQL<a class="headerlink" href="#4-postgresql" title="Permanent link">&para;</a></h2>
 <h3 id="23-repository">23. Repository<a class="headerlink" href="#23-repository" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-23">Готовое решение →</a></p>
 <p>Реализуйте create/find/list через <code>database/sql</code>. Закрывайте rows, проверяйте <code>rows.Err</code>, отображайте <code>sql.ErrNoRows</code> в domain error.</p>
 <h3 id="24-transactional-transfer">24. Transactional transfer<a class="headerlink" href="#24-transactional-transfer" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-24">Готовое решение →</a></p>
 <p>Переведите деньги между счетами с row locking, проверкой баланса и audit record. Проверьте rollback и concurrent transfers.</p>
 <h3 id="25-outbox">25. Outbox<a class="headerlink" href="#25-outbox" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-25">Готовое решение →</a></p>
 <p>В одной транзакции измените aggregate и сохраните событие. Отдельный publisher читает outbox, публикует и отмечает запись. Обеспечьте at-least-once и идемпотентного consumer.</p>
 <h3 id="26-pool-under-load">26. Pool under load<a class="headerlink" href="#26-pool-under-load" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-26">Готовое решение →</a></p>
 <p>Создайте нагрузочный тест с маленьким <code>MaxOpenConns</code>. Наблюдайте <code>WaitCount</code>, <code>WaitDuration</code>, latency и database capacity. Обоснуйте итоговые настройки.</p>
 <h2 id="5">Уровень 5. Качество и эксплуатация<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <h3 id="27-fuzz-json-parser">27. Fuzz JSON parser<a class="headerlink" href="#27-fuzz-json-parser" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-27">Готовое решение →</a></p>
 <p>Добавьте fuzz test к парсеру cursor или входного DTO. Seed corpus должен включать валидные, пустые, Unicode и граничные значения.</p>
 <h3 id="28-benchmark">28. Benchmark и аллокации<a class="headerlink" href="#28-benchmark" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-28">Готовое решение →</a></p>
 <p>Сравните две реализации serializer/aggregator. Используйте <code>ReportAllocs</code>, realistic payload и профилирование. Не принимайте оптимизацию без измеримого выигрыша.</p>
 <h3 id="29-observability">29. Observability<a class="headerlink" href="#29-observability" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-29">Готовое решение →</a></p>
 <p>Добавьте structured logs, HTTP RED metrics, DB pool metrics и trace propagation. Не используйте user-controlled значение как безграничный label.</p>
 <h3 id="30-failure-drill">30. Failure drill<a class="headerlink" href="#30-failure-drill" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#go-30">Готовое решение →</a></p>
 <p>Смоделируйте недоступность БД, зависший downstream, SIGTERM под нагрузкой и заполнение очереди. Для каждого сценария зафиксируйте ожидаемые сигналы и восстановление.</p>
 <h2 id="order-service">Итоговый проект: Order Service<a class="headerlink" href="#order-service" title="Permanent link">&para;</a></h2>
 <h3 id="_2">Функциональность<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -2297,7 +2359,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="30 августа 2026 г. 12:12:05 UTC">30 августа 2026 г.</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="30 августа 2026 г. 12:22:00 UTC">30 августа 2026 г.</span>
   </span>
 
     
@@ -2361,13 +2423,13 @@
         
         
           
-          <a href="../../arch/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Архитектурные стили">
+          <a href="../solutions/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Решения Go">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                Архитектурные стили
+                Решения Go
               </div>
             </div>
             <div class="md-footer__button md-icon">

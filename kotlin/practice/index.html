@@ -14,7 +14,7 @@
         <link rel="prev" href="../01-intro-jdbc/">
       
       
-        <link rel="next" href="../../go/">
+        <link rel="next" href="../solutions/">
       
       
         
@@ -699,6 +699,8 @@
       
         
       
+        
+      
     
     
     
@@ -1177,6 +1179,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Решения Kotlin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1195,6 +1225,8 @@
       
         
           
+        
+      
         
       
         
@@ -1745,6 +1777,7 @@
 </ul>
 <h2 id="1-null-safety">Уровень 1. Язык и null safety<a class="headerlink" href="#1-null-safety" title="Permanent link">&para;</a></h2>
 <h3 id="1">1. Безопасный профиль пользователя<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-01">Готовое решение →</a></p>
 <p>Реализуйте функцию, которая принимает nullable DTO пользователя и возвращает нормализованный <code>UserProfile</code>.</p>
 <p>Требования:</p>
 <ul>
@@ -1755,6 +1788,7 @@
 <li>тесты покрывают <code>null</code>, пустое имя, граничный возраст и корректный DTO.</li>
 </ul>
 <h3 id="2">2. Конечный автомат заказа<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-02">Готовое решение →</a></p>
 <p>Опишите состояния <code>Created</code>, <code>Paid</code>, <code>Shipped</code>, <code>Cancelled</code> sealed-иерархией. Реализуйте переходы так, чтобы невозможный переход возвращал предметную ошибку.</p>
 <p>Критерии:</p>
 <ul>
@@ -1764,24 +1798,33 @@
 <li>таблица тестов содержит все пары «состояние × команда».</li>
 </ul>
 <h3 id="3-value-class">3. Value class для идентификатора<a class="headerlink" href="#3-value-class" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-03">Готовое решение →</a></p>
 <p>Создайте <code>@JvmInline value class OrderId</code>. Валидируйте формат, сравните API фабрики и публичного конструктора, проверьте Java interop.</p>
 <h3 id="4">4. Коллекции без лишних проходов<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-04">Готовое решение →</a></p>
 <p>По списку событий постройте статистику заказов по клиенту. Реализуйте eager-вариант на коллекциях и lazy-вариант на <code>Sequence</code>, затем сравните читаемость и количество промежуточных коллекций.</p>
 <h3 id="5-scope-functions">5. Scope functions без «матрёшки»<a class="headerlink" href="#5-scope-functions" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-05">Готовое решение →</a></p>
 <p>Отрефакторите код с вложенными <code>let</code>/<code>also</code>/<code>apply</code>. Оставьте scope function только там, где её receiver и возвращаемое значение очевидны из контекста.</p>
 <h3 id="6-generics-variance">6. Generics и variance<a class="headerlink" href="#6-generics-variance" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-06">Готовое решение →</a></p>
 <p>Реализуйте <code>Source&lt;out T&gt;</code> и <code>Sink&lt;in T&gt;</code>. Объясните, почему producer является covariant, а consumer — contravariant. Добавьте пример, который намеренно не должен компилироваться.</p>
 <h2 id="2-java-interop-api-design">Уровень 2. Java interop и API design<a class="headerlink" href="#2-java-interop-api-design" title="Permanent link">&para;</a></h2>
 <h3 id="7-java-api">7. Обёртка над Java API<a class="headerlink" href="#7-java-api" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-07">Готовое решение →</a></p>
 <p>Есть Java-метод, возвращающий platform type. Создайте Kotlin adapter, который немедленно нормализует <code>null</code> и не выпускает platform type в предметный слой.</p>
 <h3 id="8-kotlin-api-java-">8. Kotlin API для Java-клиента<a class="headerlink" href="#8-kotlin-api-java-" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-08">Готовое решение →</a></p>
 <p>Создайте Kotlin-сервис с default parameters и extension-функцией. Затем напишите Java-клиент. Используйте <code>@JvmOverloads</code>, top-level naming или <code>@JvmStatic</code> только там, где они действительно улучшают вызов.</p>
 <h3 id="9-java">9. Исключение для Java<a class="headerlink" href="#9-java" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-09">Готовое решение →</a></p>
 <p>Kotlin-функция выполняет файловую операцию. Сделайте checked exception видимым Java-компилятору через <code>@Throws</code>, затем сравните вызов из Kotlin и Java.</p>
 <h3 id="10-read-only-immutable">10. Read-only не значит immutable<a class="headerlink" href="#10-read-only-immutable" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-10">Готовое решение →</a></p>
 <p>Продемонстрируйте, как <code>List&lt;T&gt;</code> может ссылаться на изменяемую коллекцию. Исправьте границу модуля defensive copy и тестом докажите отсутствие внешней мутации.</p>
 <h2 id="3-coroutines-flow">Уровень 3. Coroutines и Flow<a class="headerlink" href="#3-coroutines-flow" title="Permanent link">&para;</a></h2>
 <h3 id="11">11. Параллельный агрегатор<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-11">Готовое решение →</a></p>
 <p>Запросите профиль, заказы и рекомендации параллельно через <code>coroutineScope</code> и <code>async</code>.</p>
 <p>Требования:</p>
 <ul>
@@ -1792,17 +1835,23 @@
 <li>тесты проверяют cancellation и порядок завершения.</li>
 </ul>
 <h3 id="12">12. Ограничение параллелизма<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-12">Готовое решение →</a></p>
 <p>Обработайте 1 000 элементов, разрешив не больше восьми одновременных операций. Измерьте фактический максимум через тестовый счётчик.</p>
 <h3 id="13-flow-backpressure">13. Flow с backpressure<a class="headerlink" href="#13-flow-backpressure" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-13">Готовое решение →</a></p>
 <p>Постройте pipeline событий: producer → validation → enrichment → batch writer. Исследуйте <code>buffer</code>, <code>conflate</code> и <code>collectLatest</code>; для каждого оператора опишите допустимость потери промежуточных значений.</p>
 <h3 id="14-retry">14. Retry только для временных ошибок<a class="headerlink" href="#14-retry" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-14">Готовое решение →</a></p>
 <p>Повторяйте операцию с exponential backoff только для <code>TransientFailure</code>. Не повторяйте validation-ошибки и cancellation. Добавьте jitter и верхнюю границу задержки.</p>
 <h3 id="15-shared-state">15. Защита shared state<a class="headerlink" href="#15-shared-state" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-15">Готовое решение →</a></p>
 <p>Решите одну задачу тремя способами: <code>Mutex</code>, actor-подобный channel и атомарная структура. Сравните инварианты, throughput и сложность.</p>
 <h2 id="4-jdbc">Уровень 4. JDBC и транзакции<a class="headerlink" href="#4-jdbc" title="Permanent link">&para;</a></h2>
 <h3 id="16">16. Репозиторий без утечек<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-16">Готовое решение →</a></p>
 <p>Реализуйте JDBC-репозиторий заказов. Все <code>Connection</code>, <code>PreparedStatement</code> и <code>ResultSet</code> должны закрываться через <code>use</code>; SQL использует параметры; <code>null</code> БД отображается в nullable Kotlin type.</p>
 <h3 id="17">17. Денежный перевод<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-17">Готовое решение →</a></p>
 <p>В одной транзакции спишите сумму, зачислите получателю и сохраните запись аудита.</p>
 <p>Проверьте:</p>
 <ul>
@@ -1813,6 +1862,7 @@
 <li>конкурентное выполнение двух переводов.</li>
 </ul>
 <h3 id="18-coroutine-boundary-jdbc">18. Coroutine boundary для JDBC<a class="headerlink" href="#18-coroutine-boundary-jdbc" title="Permanent link">&para;</a></h3>
+<p><a href="../solutions/#kotlin-18">Готовое решение →</a></p>
 <p>JDBC является блокирующим API. Оберните вызов в выделенный dispatcher, ограниченный размером пула. Объясните, почему <code>suspend</code> не превращает JDBC в неблокирующий драйвер.</p>
 <h2 id="_2">Итоговый проект: сервис управления задачами<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Создайте HTTP-сервис со следующими возможностями:</p>
@@ -1894,7 +1944,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="30 августа 2026 г. 12:12:05 UTC">30 августа 2026 г.</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="30 августа 2026 г. 12:22:00 UTC">30 августа 2026 г.</span>
   </span>
 
     
@@ -1958,13 +2008,13 @@
         
         
           
-          <a href="../../go/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Маршрут Go">
+          <a href="../solutions/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Решения Kotlin">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                Маршрут Go
+                Решения Kotlin
               </div>
             </div>
             <div class="md-footer__button md-icon">
