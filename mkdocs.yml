@@ -2,7 +2,7 @@ site_name: Методичка по Java
 repo_name: 1ommyS/itp-ebook
 repo_url: https://github.com/1ommyS/itp-ebook
 edit_uri: edit/develop/docs/
-copyright: Copyright &copy; 2022 - 2025 1ommyS
+copyright: Copyright &copy; 2022 - 2026 1ommyS
 theme:
   icon:
     repo: fontawesome/brands/github
@@ -65,7 +65,6 @@ markdown_extensions:
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
-  - pymdownx.details
 
 plugins:
   - search:
@@ -86,54 +85,106 @@ extra:
 
 nav:
   - Оглавление: index.md
-  - Java Core:
-      - Datatypes: javabase/01-datatypes.md
-      - Mathfunctions: javabase/02-mathfunctions.md
-      - IfElse: javabase/03-control.md
-      - Arrays: javabase/04-arrays.md
-      - Methods: javabase/05-methods.md
-      - Jvm: javabase/06-jvm.md
-      - Classes: javabase/07-classes.md
-      - Date: javabase/08-date.md
-      - Files: javabase/09-files.md
-      - Exceptions: javabase/10-exceptions.md
-      - Interfaces: javabase/11-interfaces.md
-      - Patterns: javabase/12-patterns.md
-      - Lambdas: javabase/13-anonymous-lambda.md
-      - Stream API: javabase/14-stream-api.md
-      - Regex: javabase/15-regex.md
-      - Multithreading: javabase/16-multithreading.md
-      - HashMap: javabase/17-hashmap.md
-      - Интерфейсы: javabase/08-interfaces.md
-      - Исключения: javabase/09-exceptions.md
-      - Static: javabase/10-static.md
-      - DateTime: javabase/11-datetime.md
-  - Kotlin:
-      - IntroJdbc: kotlin/01-intro-jdbc.md
-  - SQL:
-      - Основы: sql/main-operators.md
-      - Ограничения(contsraints): sql/constraints.md
-      - Виды связей: sql/relations.md
-      - Джоины: sql/joins.md
-      - Индексы: sql/indexes.md
-      - Партиционирование: sql/partitions.md
-      - Master/Slave: sql/master-slave.md
-      - sharding: sql/sharding.md
-      - Consistent-Hash: sql/consistent-hash.md
-  - Hibernate:
-      - База: hibernate/base.md
-      - Entity_Graph: hibernate/entity_graph.md
-  - Spring:
-      - Основы: spring/base.md
-      - DI: spring/di.md
-      - DataJPA: spring/data-jpa.md
-      - Dispatcher Servlet: spring/dispatcher-servlet.md
-      - REST controllers & all info: spring/rest.md
-      - Severs: spring/servers.md
-      - REST template / Openfeign: spring/rest-feign.md
-  - WEB:
-      - HTML/CSS: web/html_css.md
-  - Архитектура:
-      - Основные виды: arch.md
-  - Homework:
-      - JDBC,Tests: homework/01-jdbc-tests-docker.md
+  - Подготовка к собеседованию:
+      - Маршрут: interview/index.md
+      - Покрытие чек-листа: interview/coverage.md
+      - Подробные конспекты:
+          - Java Core: interview/deep/java-core.md
+          - Collections: interview/deep/collections.md
+          - Generics и функциональный стиль: interview/deep/generics-functional.md
+          - JVM: interview/deep/jvm.md
+          - Concurrency: interview/deep/concurrency.md
+          - Algorithms: interview/deep/algorithms.md
+          - SQL и PostgreSQL: interview/deep/sql-postgresql.md
+          - Spring Core: interview/deep/spring-core.md
+          - Spring Boot: interview/deep/spring-boot.md
+          - Spring Web: interview/deep/spring-web.md
+          - JPA и Hibernate: interview/deep/jpa-hibernate.md
+          - Transactions и Security: interview/deep/transactions-security.md
+          - Kafka: interview/deep/kafka.md
+          - Redis: interview/deep/redis.md
+          - REST и gRPC: interview/deep/grpc-rest.md
+          - Microservices: interview/deep/microservices.md
+          - Testing: interview/deep/testing.md
+          - Docker и CI/CD: interview/deep/docker-cicd.md
+          - Observability: interview/deep/observability.md
+          - System Design: interview/deep/system-design.md
+          - Practical Java: interview/deep/practical-java.md
+      - Java Core: interview/java-core.md
+      - Коллекции, generics и Stream API: interview/collections-functional.md
+      - JVM и многопоточность: interview/jvm-concurrency.md
+      - Алгоритмы и coding: interview/algorithms-practice.md
+      - SQL и PostgreSQL: interview/sql-postgresql.md
+      - Spring Core, Boot и Web: interview/spring.md
+      - JPA, транзакции и Security: interview/persistence-security.md
+      - Kafka, Redis, REST и gRPC: interview/integration.md
+      - Микросервисы: interview/microservices.md
+      - Тесты, CI/CD и наблюдаемость: interview/testing-delivery-observability.md
+      - System design: interview/system-design.md
+      - Практический прогон: interview/mock-interview.md
+      - Дополнительные задания: interview/practice-new-topics.md
+  - Справочник:
+      - Java:
+          - Типы данных: javabase/01-datatypes.md
+          - Math API: javabase/02-mathfunctions.md
+          - Управляющие конструкции: javabase/03-control.md
+          - Массивы: javabase/04-arrays.md
+          - Методы: javabase/05-methods.md
+          - JVM, JDK и JRE: javabase/06-jvm.md
+          - Классы и ООП: javabase/07-classes.md
+          - Интерфейсы: javabase/08-interfaces.md
+          - Исключения: javabase/09-exceptions.md
+          - Файлы: javabase/09-files.md
+          - Static: javabase/10-static.md
+          - Date и Time API: javabase/11-datetime.md
+          - Паттерны: javabase/12-patterns.md
+          - Lambda: javabase/13-anonymous-lambda.md
+          - Stream API: javabase/14-stream-api.md
+          - Regex: javabase/15-regex.md
+          - Многопоточность: javabase/16-multithreading.md
+          - HashMap: javabase/17-hashmap.md
+      - SQL и PostgreSQL:
+          - Основные операторы: sql/main-operators.md
+          - Ограничения: sql/constraints.md
+          - Связи: sql/relations.md
+          - JOIN: sql/joins.md
+          - Индексы: sql/indexes.md
+          - Партиционирование: sql/partitions.md
+          - Репликация: sql/master-slave.md
+          - Шардинг: sql/sharding.md
+          - Consistent hashing: sql/consistent-hash.md
+      - Spring и Hibernate:
+          - Spring — основы: spring/base.md
+          - Dependency Injection: spring/di.md
+          - DispatcherServlet: spring/dispatcher-servlet.md
+          - REST controllers: spring/rest.md
+          - Серверы: spring/servers.md
+          - REST Template и OpenFeign: spring/rest-feign.md
+          - Spring Data JPA: spring/data-jpa.md
+          - Hibernate — основы: hibernate/base.md
+          - Entity Graph: hibernate/entity_graph.md
+  - Практика:
+      - Базовые задачи:
+          - Типы данных и условия: tasks/01-data-types-conditions.md
+          - Циклы: tasks/02-cycles.md
+          - Цикл for и Git: tasks/03-cycles-for.md
+          - Массивы: tasks/04-arrays.md
+          - Методы и строки: tasks/twelwe/05-methods.md
+          - Методы и рекурсия: tasks/twelwe/06-methods-recursion.md
+          - Git и ООП: tasks/twelwe/07-git-branches-oop.md
+      - Углублённые задачи:
+          - Дополнительная практика: tasks/01-dop.md
+          - ООП: tasks/02-oop-java.md
+          - Большая практика: tasks/03-big-practice.md
+          - Lambda: tasks/04-lambda.md
+          - HashMap и Stream API: tasks/05-hashmap.md
+          - Многопоточность: tasks/06-multithreading.md
+          - Maven и Gradle: tasks/07-mavengradle.md
+          - Проектирование БД: tasks/08-db-arch.md
+          - Коллекции и стримы: tasks/topit/01.md
+      - Проект ЭДО: projects/edo/01-task-practice-base-oop.md
+      - JDBC, тесты и Docker: homework/01-jdbc-tests-docker.md
+  - Дополнительно:
+      - Архитектурные стили: arch.md
+      - Kotlin и JDBC: kotlin/01-intro-jdbc.md
+      - HTML и CSS: web/html_css.md

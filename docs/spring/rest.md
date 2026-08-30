@@ -1,3 +1,5 @@
+# REST-контроллеры в Spring
+
 ## 1. Что такое REST-контроллер в Spring
 
 * Аннотация `@RestController` сочетает в себе `@Controller` и `@ResponseBody`.

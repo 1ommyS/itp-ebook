@@ -1,4 +1,6 @@
 
+# Spring Framework: основы
+
 ## 1. Основные принципы Spring
 
 1. **Inversion of Control (IoC)**
@@ -28,7 +30,6 @@ Spring состоит из набора взаимосвязанных моду�
 | **Integration**    | Spring Integration, Enterprise Integration Patterns        |
 | **Security**       | Spring Security (аутентификация, авторизация)              |
 | **Batch**          | Обработка больших объёмов данных партиями                  |
-| **Social**         | Подключение OAuth, социальные сети                         |
 | **Boot**           | Автоконфигурация, упрощённый старт приложений              |
 
 Все модули строятся поверх **Core Container** и могут дополняться друг другом.

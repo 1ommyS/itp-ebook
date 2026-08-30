@@ -1,4 +1,6 @@
 
+# DispatcherServlet и обработка HTTP-запроса
+
 ## 1. Front-Controller: роль DispatcherServlet
 
 В основе Spring MVC лежит шаблон **Front Controller**. Вся входящая HTTP-активность направляется в единый точка — `DispatcherServlet`:

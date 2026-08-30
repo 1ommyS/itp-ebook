@@ -1,3 +1,5 @@
+# Репликация Primary/Replica
+
 ## 1. Общая модель Master–Slave
 
 1. **Master (ведущий)**

@@ -1,4 +1,6 @@
 
+# Dependency Injection в Spring
+
 ## 1. Принцип Inversion of Control и DI
 
 * **Inversion of Control (IoC)** — контейнер управляет созданием и жизненным циклом компонентов (bean-ов), а не ваша программа вручную.
