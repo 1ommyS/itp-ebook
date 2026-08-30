@@ -1,10 +1,10 @@
 <div class="handbook-hero" markdown>
 
-<span class="handbook-eyebrow">Java Backend · от языка до архитектуры</span>
+<span class="handbook-eyebrow">Backend engineering · Java · Kotlin · Go</span>
 
 # Инженерная методичка, а не набор определений
 
-Подробная программа по Java, Spring, базам данных и распределённым системам. Материалы помогают не только вспомнить термин, но и объяснить механизм, написать код и защитить решение на уточняющих вопросах.
+Подробная программа по Java, Kotlin, Go, Spring, базам данных и распределённым системам. Материалы помогают не только вспомнить термин, но и объяснить механизм, написать код и защитить решение на уточняющих вопросах.
 
 [Начать подготовку](interview/index.md){ .md-button .md-button--primary }
 [Открыть карту тем](interview/coverage.md){ .md-button }
@@ -13,7 +13,7 @@
 
 <div class="handbook-stats">
   <div class="handbook-stat"><strong>255+</strong><span>тем из программы подготовки</span></div>
-  <div class="handbook-stat"><strong>21</strong><span>углублённый конспект</span></div>
+  <div class="handbook-stat"><strong>25+</strong><span>углублённых конспектов</span></div>
   <div class="handbook-stat"><strong>40+</strong><span>дополнительных заданий</span></div>
 </div>
 
@@ -75,6 +75,8 @@
 - [:material-connection: **Интеграции**](interview/deep/kafka.md) · Kafka, Redis, REST и gRPC
 - [:material-cube-outline: **Архитектура**](interview/deep/microservices.md) · микросервисы и system design
 - [:material-flask-outline: **Проверка знаний**](interview/practice-new-topics.md) · лабораторные и проектные задания
+- [:material-language-kotlin: **Kotlin**](kotlin/index.md) · Kotlin/JVM, coroutines, Java interop и JDBC
+- [:material-language-go: **Go**](go/index.md) · язык, concurrency, HTTP и работа с данными
 
 </div>
 

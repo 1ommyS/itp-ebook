@@ -1,4 +1,11 @@
 
+# Kotlin/JVM: язык, стандартная библиотека и JDBC
+
+Эта глава — подробный справочник по ключевым конструкциям Kotlin/JVM. Если вы только начинаете, сначала откройте [маршрут Kotlin](index.md), а после каждого блока выполняйте задания из [практикума](practice.md).
+
+!!! info "О версиях"
+    Языковые примеры опираются на современный Kotlin 2.x. Версии Gradle-плагина, JDBC-драйвера и тестовых библиотек в реальном проекте фиксируйте через version catalog и сверяйте с официальной документацией.
+
 ---
 
 ## 1. Null Safety (Безопасность от null)
@@ -477,6 +484,26 @@ inline fun inlineWithNoinline(
 ```
 
 ---
+
+## Java interop
+
+Kotlin/JVM использует Java-классы напрямую, но граница языков ослабляет некоторые гарантии. Java reference type без nullability-аннотаций становится platform type: компилятор разрешает трактовать его как nullable или non-null, а неверное предположение проявится уже во время выполнения.
+
+```kotlin
+// Java API: String findName(long id), nullability не указана
+val raw = javaRepository.findName(42) // тип отображается как String!
+val safeName: String? = raw
+val displayName = safeName?.trim()?.takeIf { it.isNotEmpty() } ?: "Unknown"
+```
+
+На границе с Java:
+
+- сразу задавайте явный nullable/non-null тип вместо распространения platform type;
+- учитывайте, что Java может передать `null` в Kotlin non-null параметр;
+- используйте `@Throws`, если Java-клиент должен увидеть checked exception в сигнатуре;
+- применяйте `@JvmOverloads` только для действительно нужных Java overloads;
+- помните, что Kotlin read-only collections отображаются в Java interfaces, которые не гарантируют immutability;
+- проверяйте публичный Kotlin API небольшим Java compile test.
 
 ## 18. Работа с JDBC на Kotlin
 

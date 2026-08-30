@@ -1,5 +1,5 @@
-site_name: Java Backend Handbook
-site_description: Подробная методичка по Java, Spring, базам данных, распределённым системам и подготовке к собеседованиям
+site_name: Backend Engineering Handbook
+site_description: Подробная методичка по Java, Kotlin, Go, Spring, базам данных и распределённым системам
 repo_name: 1ommyS/itp-ebook
 repo_url: https://github.com/1ommyS/itp-ebook
 edit_uri: edit/main/docs/
@@ -93,6 +93,7 @@ plugins:
       locale: ru
       type: date
       enable_creation_date: true
+      enable_git_follow: false
       fallback_to_build_date: true
 
 extra:
@@ -197,7 +198,15 @@ nav:
           - Коллекции и стримы: tasks/topit/01.md
       - Проект ЭДО: projects/edo/01-task-practice-base-oop.md
       - JDBC, тесты и Docker: homework/01-jdbc-tests-docker.md
+  - Kotlin:
+      - Маршрут Kotlin: kotlin/index.md
+      - Kotlin/JVM и JDBC: kotlin/01-intro-jdbc.md
+      - Практика Kotlin: kotlin/practice.md
+  - Go:
+      - Маршрут Go: go/index.md
+      - Язык и типы: go/language.md
+      - Backend и concurrency: go/backend.md
+      - Практика Go: go/practice.md
   - Дополнительно:
       - Архитектурные стили: arch.md
-      - Kotlin и JDBC: kotlin/01-intro-jdbc.md
       - HTML и CSS: web/html_css.md
