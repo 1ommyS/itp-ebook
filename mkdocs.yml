@@ -1,43 +1,62 @@
-site_name: Методичка по Java
+site_name: Java Backend Handbook
+site_description: Подробная методичка по Java, Spring, базам данных, распределённым системам и подготовке к собеседованиям
 repo_name: 1ommyS/itp-ebook
 repo_url: https://github.com/1ommyS/itp-ebook
-edit_uri: edit/develop/docs/
-copyright: Copyright &copy; 2022 - 2026 1ommyS
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2022–2026 1ommyS
+
 theme:
+  name: material
+  language: ru
+  font: false
   icon:
     repo: fontawesome/brands/github
-    logo: fontawesome/solid/book
+    logo: material/language-java
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Использовать светлую тему
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+        name: Использовать тёмную тему
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
-  language: ru
-  name: material
+        name: Использовать системную тему
   features:
     - content.action.edit
     - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.code.select
+    - content.tabs.link
     - content.tooltips
     - navigation.footer
     - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.prune
     - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -51,8 +70,8 @@ markdown_extensions:
   - pymdownx.details
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -71,36 +90,40 @@ plugins:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang: ru
   - git-revision-date-localized:
+      locale: ru
+      type: date
       enable_creation_date: true
+      fallback_to_build_date: true
+
 extra:
-  version:
-    provider: mike
   social:
     - icon: fontawesome/brands/telegram
       link: https://t.me/1ommyS
-      name: ТГ автора
+      name: Telegram автора
     - icon: fontawesome/brands/telegram
       link: https://t.me/jvmchat
       name: Pro.JVM Чат
 
 nav:
-  - Оглавление: index.md
-  - Подготовка к собеседованию:
-      - Маршрут: interview/index.md
-      - Покрытие чек-листа: interview/coverage.md
-      - Подробные конспекты:
+  - Главная: index.md
+  - Подготовка:
+      - Маршрут подготовки: interview/index.md
+      - Карта тем: interview/coverage.md
+      - Java и JVM:
           - Java Core: interview/deep/java-core.md
           - Collections: interview/deep/collections.md
           - Generics и функциональный стиль: interview/deep/generics-functional.md
           - JVM: interview/deep/jvm.md
           - Concurrency: interview/deep/concurrency.md
           - Algorithms: interview/deep/algorithms.md
+      - Данные и Spring:
           - SQL и PostgreSQL: interview/deep/sql-postgresql.md
           - Spring Core: interview/deep/spring-core.md
           - Spring Boot: interview/deep/spring-boot.md
           - Spring Web: interview/deep/spring-web.md
           - JPA и Hibernate: interview/deep/jpa-hibernate.md
           - Transactions и Security: interview/deep/transactions-security.md
+      - Интеграции и архитектура:
           - Kafka: interview/deep/kafka.md
           - Redis: interview/deep/redis.md
           - REST и gRPC: interview/deep/grpc-rest.md
@@ -109,20 +132,10 @@ nav:
           - Docker и CI/CD: interview/deep/docker-cicd.md
           - Observability: interview/deep/observability.md
           - System Design: interview/deep/system-design.md
+      - Практический блок:
           - Practical Java: interview/deep/practical-java.md
-      - Java Core: interview/java-core.md
-      - Коллекции, generics и Stream API: interview/collections-functional.md
-      - JVM и многопоточность: interview/jvm-concurrency.md
-      - Алгоритмы и coding: interview/algorithms-practice.md
-      - SQL и PostgreSQL: interview/sql-postgresql.md
-      - Spring Core, Boot и Web: interview/spring.md
-      - JPA, транзакции и Security: interview/persistence-security.md
-      - Kafka, Redis, REST и gRPC: interview/integration.md
-      - Микросервисы: interview/microservices.md
-      - Тесты, CI/CD и наблюдаемость: interview/testing-delivery-observability.md
-      - System design: interview/system-design.md
-      - Практический прогон: interview/mock-interview.md
-      - Дополнительные задания: interview/practice-new-topics.md
+          - Пробное интервью: interview/mock-interview.md
+          - Дополнительные задания: interview/practice-new-topics.md
   - Справочник:
       - Java:
           - Типы данных: javabase/01-datatypes.md

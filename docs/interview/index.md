@@ -1,63 +1,86 @@
-# Подготовка к Java-собеседованию
+<div class="handbook-hero" markdown>
 
-Эта часть методички превращает чек-лист из Excel в последовательный маршрут подготовки. Цель — не запомнить определения, а научиться делать три вещи: объяснять решение, писать небольшой рабочий код и выдерживать уточняющие вопросы.
+<span class="handbook-eyebrow">Маршрут подготовки</span>
 
-## Как работать с каждой темой
+# От первого ответа до уверенного system design
 
-Используйте короткий цикл из четырёх шагов:
+Программа превращает чек-лист из Excel в последовательное обучение. На каждом этапе нужно понять модель, проговорить ответ, закрепить его кодом и разобрать компромиссы.
 
-1. **Понять модель.** Ответьте, какую проблему решает инструмент и какие гарантии даёт.
-2. **Объяснить вслух.** Сформулируйте ответ за 60–90 секунд без конспекта.
-3. **Закрепить кодом.** Напишите минимальный пример или запрос и проверьте граничные случаи.
-4. **Разобрать компромиссы.** Назовите альтернативу, цену решения и ситуацию, где оно не подходит.
+[Посмотреть все темы](coverage.md){ .md-button .md-button--primary }
+[Перейти к заданиям](practice-new-topics.md){ .md-button }
+
+</div>
+
+## Метод сильного ответа
+
+<div class="grid cards" markdown>
+
+-   :material-lightbulb-on-outline:{ .lg .middle } **1. Модель**
+
+    Какую проблему решает инструмент? Какие гарантии и инварианты он создаёт?
+
+-   :material-microphone-message:{ .lg .middle } **2. Объяснение**
+
+    Сформулируйте ответ за 60–90 секунд: определение → механизм → пример.
+
+-   :material-code-block-tags:{ .lg .middle } **3. Реализация**
+
+    Напишите минимальный код или запрос и проверьте граничные случаи.
+
+-   :material-scale-balance:{ .lg .middle } **4. Компромиссы**
+
+    Назовите цену решения, альтернативу и случай, когда нужен другой инструмент.
+
+</div>
 
 !!! tip "Шаблон сильного ответа"
     **Определение → механизм → пример → ограничения → выбор.** Например: «`volatile` обеспечивает видимость записей и ограничивает переупорядочивание, но не превращает составную операцию в атомарную. Для счётчика нужен `AtomicInteger` или блокировка».
 
-## Маршрут обучения
+## Восемь этапов подготовки
 
-| Этап | Разделы | Критерий готовности |
+| Этап | Фокус | Критерий готовности |
 |---|---|---|
-| 1. Язык | Java Core, коллекции, generics, Stream API | Объясняете контракты и пишете пример без подсказок |
+| 1. Язык | Java Core, collections, generics, Stream API | Объясняете контракты и пишете пример без подсказок |
 | 2. Runtime | JVM, GC, JIT, JMM | Связываете симптом с областью памяти или механизмом исполнения |
 | 3. Параллелизм | Потоки, locks, futures, virtual threads | Находите race condition и обосновываете синхронизацию |
 | 4. Данные | SQL, PostgreSQL, JPA, транзакции | Читаете план запроса и объясняете границы транзакции |
 | 5. Backend | Spring Core, Boot, Web, Security | Проходите путь запроса от сети до репозитория |
 | 6. Интеграции | Kafka, Redis, REST, gRPC | Проектируете повторяемую и идемпотентную обработку |
-| 7. Production | Микросервисы, тесты, CI/CD, наблюдаемость | Называете режимы отказа и способы их обнаружить |
+| 7. Production | Микросервисы, тесты, CI/CD, observability | Называете режимы отказа и способы их обнаружить |
 | 8. Архитектура | System design и практические задачи | Защищаете решение через требования и trade-offs |
 
-## Главы
+## Углублённые конспекты
 
-- [Java Core](java-core.md) — ООП, классы, исключения, строки и передача аргументов.
-- [Коллекции, generics и функциональный стиль](collections-functional.md) — структуры данных Java, lambda, Stream API и `Optional`.
-- [JVM и многопоточность](jvm-concurrency.md) — память, GC, JIT, JMM, синхронизация и современные модели выполнения.
-- [Алгоритмы и coding-задачи](algorithms-practice.md) — паттерны решения, структуры данных и стратегия интервью.
-- [SQL и PostgreSQL](sql-postgresql.md) — запросы, индексы, планы, MVCC и транзакции.
-- [Spring Core, Boot и Web](spring.md) — контейнер, прокси, автоконфигурация и HTTP lifecycle.
-- [JPA, транзакции и Security](persistence-security.md) — persistence context, загрузка данных и границы безопасности.
-- [Kafka, Redis, REST и gRPC](integration.md) — контракты интеграций, доставка и кэширование.
-- [Микросервисные паттерны](microservices.md) — согласованность, устойчивость и надёжная публикация событий.
-- [Тестирование, доставка и наблюдаемость](testing-delivery-observability.md) — проверка системы и эксплуатационные сигналы.
-- [System design](system-design.md) — расчёты нагрузки, масштабирование и разбор типовых систем.
-- [Практический прогон](mock-interview.md) — задания и критерии самопроверки.
-- [Дополнительные задания по новым темам](practice-new-topics.md) — 40+ лабораторных и проектных заданий с критериями приёмки.
+<div class="grid cards" markdown>
 
-## Приоритеты
+-   :material-language-java:{ .lg .middle } **Java и runtime**
 
-Начинайте с тем `High` из чек-листа, но не считайте тему закрытой только после чтения. Отмечайте готовность лишь когда одновременно выполняются три условия:
+    [Java Core](deep/java-core.md) · [Collections](deep/collections.md) · [Generics](deep/generics-functional.md) · [JVM](deep/jvm.md) · [Concurrency](deep/concurrency.md) · [Algorithms](deep/algorithms.md)
 
-- можете объяснить механизм и привести пример;
-- можете написать ключевой фрагмент кода или SQL;
-- можете ответить на «почему не иначе?» и назвать ограничение.
+-   :material-database-cog:{ .lg .middle } **Данные и Spring**
+
+    [SQL/PostgreSQL](deep/sql-postgresql.md) · [Spring Core](deep/spring-core.md) · [Boot](deep/spring-boot.md) · [Web](deep/spring-web.md) · [JPA/Hibernate](deep/jpa-hibernate.md) · [Transactions/Security](deep/transactions-security.md)
+
+-   :material-transit-connection-variant:{ .lg .middle } **Интеграции**
+
+    [Kafka](deep/kafka.md) · [Redis](deep/redis.md) · [REST/gRPC](deep/grpc-rest.md) · [Microservices](deep/microservices.md)
+
+-   :material-chart-timeline-variant-shimmer:{ .lg .middle } **Production и архитектура**
+
+    [Testing](deep/testing.md) · [Docker/CI/CD](deep/docker-cicd.md) · [Observability](deep/observability.md) · [System Design](deep/system-design.md) · [Practical Java](deep/practical-java.md)
+
+</div>
 
 ## План на четыре недели
 
-| Неделя | Фокус | Практика |
+| Неделя | Фокус | Ежедневная практика |
 |---|---|---|
-| 1 | Java Core, коллекции, generics, JVM | 2 coding-задачи в день, один устный ответ |
+| 1 | Java Core, collections, generics, JVM | Две coding-задачи и один устный ответ |
 | 2 | Concurrency, SQL, PostgreSQL | Thread-safe задача и разбор `EXPLAIN ANALYZE` |
-| 3 | Spring, JPA, Security, API | Маленький CRUD-сервис с тестами |
+| 3 | Spring, JPA, Security, API | Небольшой CRUD-сервис с тестами |
 | 4 | Kafka, Redis, микросервисы, system design | Два архитектурных кейса и пробное интервью |
 
-Регулируйте темп по результатам практики: слабое место определяется не временем чтения, а ошибкой в объяснении или коде.
+Регулируйте темп по результатам практики: слабое место определяется не временем чтения, а ошибкой в объяснении, коде или выборе компромисса.
+
+!!! success "Финишная проверка"
+    Завершите маршрут [пробным интервью](mock-interview.md), а пробелы закройте через [дополнительные задания](practice-new-topics.md). Возвращайтесь к главе только после того, как сможете точно назвать свою ошибку.
